@@ -2,8 +2,11 @@
 
 import { useState, useRef, useCallback } from 'react';
 
+// 默认 API Key（生产环境建议用环境变量）
+const DEFAULT_API_KEY = '6LwfiPPsgCdKt5NvRjLdgEen';
+
 export default function Home() {
-  const [apiKey, setApiKey] = useState('');
+  const [apiKey, setApiKey] = useState(DEFAULT_API_KEY);
   const [originalImage, setOriginalImage] = useState<string | null>(null);
   const [resultImage, setResultImage] = useState<string | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
